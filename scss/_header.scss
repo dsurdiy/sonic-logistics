@@ -3,6 +3,7 @@
 // =============================================================================================================
 
 // .menu-icon - Бургер меню
+/*
 .menu-icon {
    display: none;
    @media (max-width: toEm($mobile)) {
@@ -20,7 +21,7 @@
       left: 0;
       width: 100%;
       height: toRem(3);
-      background-color: $lightTextColor;
+      // background-color: $lightTextColor;
       transition: all 0.5s;
    }
    span {
@@ -47,3 +48,4 @@
       }
    }
 }
+*/

@@ -1,0 +1,191 @@
+.page-hero {
+   max-width: toRem(1440);
+   margin: 0 auto;
+   padding: toRem(170) toRem(0);
+   position: relative;
+   // .page-hero__container
+   &__container {
+   }
+   // .page-hero__content
+   &__content {
+      max-width: toRem(550);
+   }
+   // .page-hero__label
+   &__label {
+      position: relative;
+      color: $accentColor;
+      font-weight: 500;
+      font-size: toRem(14);
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: toRem(12);
+      background-color: #f0f9ff;
+      border-radius: toRem(16);
+      padding: toRem(4) toRem(30) toRem(4) toRem(4);
+      border: toRem(1) solid #b9e6fe;
+      transition: all 0.3s;
+      &:not(:last-child) {
+         margin-bottom: toRem(16);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $mainBgColor;
+            color: #fff;
+         }
+      }
+      span {
+         padding: toRem(2) toRem(10);
+         background-color: #fff;
+         border-radius: toRem(16);
+         border: toRem(1) solid #b9e6fe;
+         color: $accentColor;
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         right: toRem(11);
+         width: toRem(13);
+         height: toRem(13);
+         transform: translateY(-50%);
+         background: url("../img/icons/arrow-right.svg") 0 0 / contain no-repeat;
+      }
+   }
+   // .page-hero__title
+   &__title {
+      font-size: toRem(60);
+      color: $secondaryTextColor;
+      line-height: 120%;
+      font-weight: 600;
+      &:not(:last-child) {
+         margin-bottom: toRem(24);
+      }
+   }
+   // .page-hero__text
+   &__text {
+      &:not(:last-child) {
+         margin-bottom: toRem(48);
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(10);
+         }
+      }
+   }
+   // .page-hero__actions
+   &__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: toRem(12);
+   }
+   // .page-hero__link
+   &__link {
+      display: flex;
+      align-items: center;
+      gap: toRem(11);
+      padding: toRem(16) toRem(24);
+      color: #344054;
+      border-radius: toRem(8);
+      border: toRem(1) solid #d0d5dd;
+      font-weight: 600;
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $mainBgColor;
+            color: #fff;
+            border-color: $mainBgColor;
+            path {
+               stroke: #fff;
+            }
+         }
+      }
+      &--blue {
+         background-color: $secondaryBgColor;
+         border: toRem(1) solid $secondaryBgColor;
+         color: #fff;
+      }
+      path {
+         transition: stroke 0.3s;
+      }
+   }
+   // .page-hero__image
+   &__image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      max-width: toRem(760);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+   }
+}
+
+// =============================================================================================================
+
+.button {
+   padding: toRem(12) toRem(20);
+   background-color: $secondaryBgColor;
+   color: #fff;
+   font-weight: 600;
+   font-size: toRem(16);
+   border-radius: toRem(8);
+   border: toRem(1) solid $secondaryBgColor;
+   transition: all 0.3s;
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: $mainBgColor;
+         border-color: $mainBgColor;
+      }
+   }
+   &--white {
+      background-color: #fff;
+      color: #344054;
+      border: toRem(1) solid #d0d5dd;
+      @media (any-hover: hover) {
+         &:hover {
+            color: #fff;
+         }
+      }
+   }
+}
+
+// =============================================================================================================
+
+.section-header {
+   &--text-center {
+      text-align: center;
+   }
+   // .section-header__sub-title
+   &__sub-title {
+      font-size: toRem(16);
+      font-weight: 600;
+      text-transform: capitalize;
+      color: $accentColor;
+      &:not(:last-child) {
+         margin-bottom: toRem(12);
+      }
+   }
+   // .section-header__title
+   &__title {
+      color: $secondaryTextColor;
+      font-size: toRem(36);
+      font-weight: 600;
+      line-height: 1.2;
+      &:not(:last-child) {
+         margin-bottom: toRem(20);
+      }
+   }
+   // .section-header__text
+   &__text {
+      font-size: toRem(20);
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(10);
+         }
+      }
+   }
+}

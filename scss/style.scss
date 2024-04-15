@@ -1,5 +1,5 @@
 // Підключення шрифтів
-// @import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600&display=swap");
 
 // Обнулення стилів
 @import "reset";
@@ -33,15 +33,16 @@
 }
 
 [class*="__container"] {
-   max-width: toRem(1170);
+   max-width: toRem(1245);
    margin: 0 auto;
    padding: 0 toRem(15);
 }
 
 body {
    font-family: "Inter", sans-serif;
-   font-weight: 500;
    color: $mainTextColor;
+   font-size: toRem(18);
+   line-height: 1.5;
    &.menu-open {
       overflow: hidden;
       touch-action: none;
