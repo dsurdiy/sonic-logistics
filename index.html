@@ -11,7 +11,54 @@
 <body>
    <div class="wrapper">
       <header class="header">
-
+         <div class="header__container">
+            <a href="index.html" class="header__logo">
+               <img src="img/logo.png" alt="Logo image">
+            </a>
+            <nav class="header__menu menu">
+               <ul class="menu__list">
+                  <li class="menu__item">
+                     <a class="menu__link" href="#">About</a>
+                  </li>
+                  <li class="menu__item menu__item--parent">
+                     <a class="menu__link" href="#">Shippers</a>
+                     <div class="sub-menu">
+                        <ul class="sub-menu__list">
+                           <li class="sub-menu__item">
+                              <a href="#" class="sub-menu__link">Shipper 1</a>
+                           </li>
+                           <li class="sub-menu__item">
+                              <a href="#" class="sub-menu__link">Shipper 2</a>
+                           </li>
+                           <li class="sub-menu__item">
+                              <a href="#" class="sub-menu__link">Shipper 3</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li class="menu__item menu__item--parent">
+                     <a class="menu__link" href="#">Carriers</a>
+                     <div class="sub-menu">
+                        <ul class="sub-menu__list">
+                           <li class="sub-menu__item">
+                              <a href="#" class="sub-menu__link">Carrier 1</a>
+                           </li>
+                           <li class="sub-menu__item">
+                              <a href="#" class="sub-menu__link">Carrier 2</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li class="menu__item">
+                     <a class="menu__link" href="#">Contact</a>
+                  </li>
+               </ul>
+               <!-- <button type="button" aria-label="menu button" class="menu-icon">
+                  <span></span>
+               </button> -->
+            </nav>
+            <a href="#" class="header__link button">Get a quote</a>
+         </div>
       </header>
 
       <main class="page">
