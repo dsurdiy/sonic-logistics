@@ -189,3 +189,82 @@
       }
    }
 }
+
+// =============================================================================================================
+
+.start {
+   padding: toRem(96) toRem(0);
+   background: linear-gradient(0deg, rgba(6, 89, 134, 1) 50%, rgba(255, 255, 255, 1) 50%);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(60) toRem(0);
+   }
+   @media (max-width: toEm(800)) {
+      padding: toRem(40) toRem(0);
+   }
+   // .start__container
+   &__container {
+   }
+   // .start__wrapper
+   &__wrapper {
+      padding: toRem(64);
+      background-color: #f9fafb;
+      box-shadow:
+         0 8px 8px -4px rgba(16, 24, 40, 0.03),
+         0 20px 24px -4px rgba(16, 24, 40, 0.08);
+      border-radius: toRem(16);
+      display: flex;
+      flex-wrap: wrap;
+      gap: toRem(30);
+      justify-content: space-between;
+      align-items: flex-start;
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(40);
+      }
+      @media (max-width: toEm(800)) {
+         justify-content: center;
+         gap: toRem(15);
+         padding: toRem(25) toRem(15);
+      }
+   }
+   // .start__content
+   &__content {
+      @media (max-width: toEm(800)) {
+         text-align: center;
+      }
+   }
+   // .start__title
+   &__title {
+      font-weight: 600;
+      font-size: toRem(30);
+      color: $secondaryTextColor;
+      line-height: 1.26;
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(24);
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(15);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(7);
+         }
+      }
+   }
+   // .start__text
+   &__text {
+      font-size: toRem(20);
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(18);
+         line-height: 1.2;
+      }
+   }
+   // .start__actions
+   &__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: toRem(12);
+      @media (max-width: toEm(375)) {
+         flex-grow: 1;
+         flex-direction: column;
+         text-align: center;
+      }
+   }
+}

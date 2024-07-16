@@ -58,3 +58,9 @@ body {
 @import "footer";
 
 // =============================================================================================================
+
+.page {
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+}
