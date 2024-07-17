@@ -53,6 +53,7 @@
       position: fixed;
       top: 0;
       right: 0;
+      z-index: 4;
       width: 55%;
       height: 100%;
       border-radius: toRem(0) toRem(0) toRem(0) toRem(30);
@@ -193,6 +194,7 @@
       width: toRem(30);
       height: toRem(20);
       position: relative;
+      z-index: 4;
    }
    span,
    &::before,

@@ -3,6 +3,15 @@
    margin: 0 auto;
    padding: toRem(170) toRem(0);
    position: relative;
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(120) toRem(0);
+   }
+   @media (max-width: toEm($mobileMedium)) {
+      padding: toRem(100) toRem(0);
+   }
+   @media (max-width: toEm(375)) {
+      padding: toRem(60) toRem(0);
+   }
    // .page-hero__container
    &__container {
    }
@@ -20,7 +29,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: toRem(12);
+      column-gap: toRem(12);
       background-color: #f0f9ff;
       border-radius: toRem(16);
       padding: toRem(4) toRem(30) toRem(4) toRem(4);
@@ -28,6 +37,9 @@
       transition: all 0.3s;
       &:not(:last-child) {
          margin-bottom: toRem(16);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(10);
+         }
       }
       @media (any-hover: hover) {
          &:hover {
@@ -57,16 +69,28 @@
    &__title {
       font-size: toRem(60);
       color: $secondaryTextColor;
-      line-height: 120%;
+      line-height: 1.2;
       font-weight: 600;
+      @media (max-width: toEm(800)) {
+         font-size: toRem(45);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(40);
+      }
       &:not(:last-child) {
          margin-bottom: toRem(24);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(10);
+         }
       }
    }
    // .page-hero__text
    &__text {
       &:not(:last-child) {
          margin-bottom: toRem(48);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(30);
+         }
       }
       p {
          &:not(:last-child) {
@@ -79,6 +103,9 @@
       display: flex;
       flex-wrap: wrap;
       gap: toRem(12);
+      @media (max-width: toEm(375)) {
+         flex-direction: column;
+      }
    }
    // .page-hero__link
    &__link {
@@ -91,6 +118,17 @@
       border: toRem(1) solid #d0d5dd;
       font-weight: 600;
       transition: all 0.3s;
+      @media (max-width: toEm($pc)) {
+         background-color: $secondaryBgColor;
+         border: toRem(1) solid $secondaryBgColor;
+         color: #fff;
+      }
+      @media (max-width: toEm(800)) {
+         padding: toRem(15);
+      }
+      @media (max-width: toEm(375)) {
+         justify-content: center;
+      }
       @media (any-hover: hover) {
          &:hover {
             background-color: $mainBgColor;
@@ -108,6 +146,9 @@
       }
       path {
          transition: stroke 0.3s;
+         @media (max-width: toEm($pc)) {
+            stroke: #fff;
+         }
       }
    }
    // .page-hero__image
@@ -119,8 +160,29 @@
       max-width: toRem(760);
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+      @media (max-width: toEm(1350)) {
+         max-width: toRem(650);
+      }
+      @media (max-width: toEm($pc)) {
+         max-width: none;
+         width: 115%;
+         &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+         }
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+      }
    }
 }
 
