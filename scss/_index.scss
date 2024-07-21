@@ -57,3 +57,105 @@
       }
    }
 }
+
+// =============================================================================================================
+
+.page {
+   // .page__strategy
+   &__strategy {
+   }
+}
+
+// =============================================================================================================
+
+.strategy {
+   padding: toRem(96) toRem(0);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(70) toRem(0);
+   }
+   @media (max-width: toEm(800)) {
+      padding: toRem(40) toRem(0);
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      padding: toRem(30) toRem(0);
+   }
+   // .strategy__container
+   &__container {
+   }
+   // .strategy__header
+   &__header {
+      max-width: toRem(768);
+      &:not(:last-child) {
+         margin-bottom: toRem(64);
+      }
+   }
+   // .strategy__list
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(toRem(290), 1fr));
+      column-gap: toRem(32);
+      row-gap: toRem(64);
+   }
+   // .strategy__item
+   &__item {
+   }
+}
+
+.item-strategy {
+   // .item-strategy__image
+   &__image {
+      width: toRem(48);
+      height: toRem(48);
+      object-fit: contain;
+      &:not(:last-child) {
+         margin-bottom: toRem(20);
+      }
+   }
+   // .item-strategy__title
+   &__title {
+      color: $secondaryTextColor;
+      font-size: toRem(20);
+      font-weight: 600;
+      &:not(:last-child) {
+         margin-bottom: toRem(8);
+      }
+   }
+   // .item-strategy__text
+   &__text {
+      font-size: toRem(16);
+      &:not(:last-child) {
+         margin-bottom: toRem(20);
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(5);
+         }
+      }
+   }
+   // .item-strategy__link
+   &__link {
+      font-size: toRem(16);
+      color: $accentColor;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: toRem(12);
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration-color: inherit;
+         }
+      }
+      &::after {
+         content: "";
+         flex: 0 0 toRem(12);
+         width: toRem(12);
+         height: toRem(12);
+         background: url(../img/icons/arrow-right-blue.svg) 0 0 / contain no-repeat;
+      }
+   }
+}
+
+// =============================================================================================================
