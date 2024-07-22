@@ -232,6 +232,12 @@
          @media (max-width: toEm(800)) {
             margin-bottom: toRem(8);
          }
+         .section-header--text-light & {
+            margin-bottom: toRem(24);
+         }
+      }
+      .section-header--text-light & {
+         color: #f5fbff;
       }
    }
    // .section-header__title
@@ -252,6 +258,10 @@
             margin-bottom: toRem(10);
          }
       }
+      .section-header--text-light & {
+         color: #fff;
+         font-size: toRem(48);
+      }
    }
    // .section-header__text
    &__text {
@@ -263,7 +273,14 @@
       p {
          &:not(:last-child) {
             margin-bottom: toRem(10);
+            .section-header--text-light & {
+               margin-bottom: toRem(24);
+            }
          }
+      }
+      .section-header--text-light & {
+         color: #b9e6fe;
+         font-size: toRem(18);
       }
    }
 }
