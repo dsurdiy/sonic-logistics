@@ -229,6 +229,9 @@
       color: $accentColor;
       &:not(:last-child) {
          margin-bottom: toRem(12);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(8);
+         }
       }
    }
    // .section-header__title
@@ -237,13 +240,26 @@
       font-size: toRem(36);
       font-weight: 600;
       line-height: 1.2;
+      @media (max-width: toEm(800)) {
+         font-size: toRem(28);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(24);
+      }
       &:not(:last-child) {
          margin-bottom: toRem(20);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(10);
+         }
       }
    }
    // .section-header__text
    &__text {
       font-size: toRem(20);
+      @media (max-width: toEm(800)) {
+         font-size: toRem(18);
+         text-align: justify;
+      }
       p {
          &:not(:last-child) {
             margin-bottom: toRem(10);

@@ -87,6 +87,12 @@
       max-width: toRem(768);
       &:not(:last-child) {
          margin-bottom: toRem(64);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(35);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(20);
+         }
       }
    }
    // .strategy__list
@@ -95,9 +101,15 @@
       grid-template-columns: repeat(auto-fit, minmax(toRem(290), 1fr));
       column-gap: toRem(32);
       row-gap: toRem(64);
+      @media (max-width: toEm($tablet)) {
+         gap: toRem(20);
+      }
    }
    // .strategy__item
    &__item {
+      @media (max-width: toEm($mobileSmall)) {
+         text-align: center;
+      }
    }
 }
 
@@ -109,6 +121,9 @@
       object-fit: contain;
       &:not(:last-child) {
          margin-bottom: toRem(20);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(10);
+         }
       }
    }
    // .item-strategy__title
@@ -116,8 +131,14 @@
       color: $secondaryTextColor;
       font-size: toRem(20);
       font-weight: 600;
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(18);
+      }
       &:not(:last-child) {
          margin-bottom: toRem(8);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(5);
+         }
       }
    }
    // .item-strategy__text
@@ -125,6 +146,12 @@
       font-size: toRem(16);
       &:not(:last-child) {
          margin-bottom: toRem(20);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(10);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(5);
+         }
       }
       p {
          &:not(:last-child) {
