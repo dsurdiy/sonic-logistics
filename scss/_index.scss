@@ -207,6 +207,13 @@
       display: flex;
       column-gap: toRem(64);
       align-items: center;
+      @media (max-width: toEm($pc)) {
+         column-gap: toRem(35);
+      }
+      @media (max-width: toEm($tablet)) {
+         flex-direction: column;
+         row-gap: toRem(40);
+      }
    }
    // .pledge__content
    &__content {
@@ -216,6 +223,9 @@
    &__header {
       &:not(:last-child) {
          margin-bottom: toRem(48);
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(25);
+         }
       }
    }
    // .pledge__actions
@@ -226,17 +236,24 @@
    }
    // .pledge__images
    &__images {
-      flex: 0 0 47.5%;
+      flex: 0 1 47.5%;
    }
    // .pledge__top-images
    &__top-images {
       display: grid;
-      grid-template-columns: repeat(2, toRem(160));
+      grid-template-columns: repeat(2, minmax(toRem(80), toRem(160)));
       justify-content: center;
       align-items: end;
       gap: toRem(16);
+      @media (max-width: toEm($mobileSmall)) {
+         grid-template-columns: repeat(2, minmax(toRem(80), toRem(140)));
+         gap: toRem(8);
+      }
       &:not(:last-child) {
          margin-bottom: toRem(16);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(8);
+         }
       }
    }
    // .pledge__image
@@ -250,10 +267,14 @@
    // .pledge__bottom-images
    &__bottom-images {
       display: grid;
-      grid-template-columns: toRem(192) toRem(160) toRem(192);
+      grid-template-columns: minmax(toRem(100), toRem(192)) minmax(toRem(80), toRem(160)) minmax(toRem(100), toRem(192));
       justify-content: center;
       align-items: start;
       gap: toRem(16);
+      @media (max-width: toEm($mobileSmall)) {
+         grid-template-columns: repeat(3, minmax(toRem(80), toRem(140)));
+         gap: toRem(8);
+      }
    }
 }
 

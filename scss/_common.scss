@@ -234,6 +234,9 @@
          }
          .section-header--text-light & {
             margin-bottom: toRem(24);
+            @media (max-width: toEm(800)) {
+               margin-bottom: toRem(8);
+            }
          }
       }
       .section-header--text-light & {
@@ -261,6 +264,12 @@
       .section-header--text-light & {
          color: #fff;
          font-size: toRem(48);
+         @media (max-width: toEm(800)) {
+            font-size: toRem(30);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            font-size: toRem(24);
+         }
       }
    }
    // .section-header__text
@@ -270,11 +279,17 @@
          font-size: toRem(18);
          text-align: justify;
       }
+      @media (max-width: toEm($mobileSmall)) {
+         line-height: 1.2;
+      }
       p {
          &:not(:last-child) {
             margin-bottom: toRem(10);
             .section-header--text-light & {
                margin-bottom: toRem(24);
+               @media (max-width: toEm(800)) {
+                  margin-bottom: toRem(10);
+               }
             }
          }
       }
