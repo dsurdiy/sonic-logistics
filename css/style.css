@@ -752,15 +752,16 @@ body.menu-open {
 
 .sub-menu {
   position: absolute;
-  top: 0.8125rem;
+  top: 100%;
   left: 0;
+  z-index: 5;
   padding-top: 0.4375rem;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  -webkit-transform: translate(0, 10%);
-      -ms-transform: translate(0, 10%);
-          transform: translate(0, 10%);
+  -webkit-transform: translateY(10%);
+      -ms-transform: translateY(10%);
+          transform: translateY(10%);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -769,6 +770,9 @@ body.menu-open {
     opacity: 1;
     pointer-events: all;
     visibility: visible;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 @media (max-width: 50em) {
@@ -778,9 +782,9 @@ body.menu-open {
     pointer-events: all;
     visibility: visible;
     padding-top: 0;
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 .sub-menu__list {

@@ -128,19 +128,21 @@
 
 .sub-menu {
    position: absolute;
-   top: toRem(13);
+   top: 100%;
    left: 0;
+   z-index: 5;
    padding-top: toRem(7);
    opacity: 0;
    pointer-events: none;
    visibility: hidden;
-   transform: translate(0, 10%);
+   transform: translateY(10%);
    transition: all 0.3s;
    @media (any-hover: hover) {
       .menu__item--parent:hover & {
          opacity: 1;
          pointer-events: all;
          visibility: visible;
+         transform: translateY(0);
       }
    }
    @media (max-width: toEm(800)) {
@@ -149,9 +151,8 @@
       pointer-events: all;
       visibility: visible;
       padding-top: 0;
-      transform: translate(0, 0);
+      transform: translateY(0);
    }
-
    // .sub-menu__list
    &__list {
       width: toRem(150);
