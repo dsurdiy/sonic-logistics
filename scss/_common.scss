@@ -184,6 +184,27 @@
          clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
       }
    }
+   // .page-hero__main-link
+   &__main-link {
+      font-weight: 600;
+      display: inline-flex;
+      gap: toRem(17);
+      align-items: center;
+      border-bottom: toRem(1) solid transparent;
+      transition: border-bottom-color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            border-bottom-color: inherit;
+         }
+      }
+      &::after {
+         content: "";
+         flex: 0 0 toRem(14);
+         width: toRem(14);
+         height: toRem(14);
+         background: url("../img/icons/arrow-grey.svg") 0 0 / contain no-repeat;
+      }
+   }
 }
 
 // =============================================================================================================
