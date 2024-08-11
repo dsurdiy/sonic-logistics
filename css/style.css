@@ -345,6 +345,33 @@ body.menu-open {
   -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 }
+.page-hero__main-link {
+  font-weight: 600;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 1.0625rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.0625rem solid transparent;
+  -webkit-transition: border-bottom-color 0.3s;
+  transition: border-bottom-color 0.3s;
+}
+@media (any-hover: hover) {
+  .page-hero__main-link:hover {
+    border-bottom-color: inherit;
+  }
+}
+.page-hero__main-link::after {
+  content: "";
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0.875rem;
+          flex: 0 0 0.875rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  background: url("../img/icons/arrow-grey.svg") 0 0/contain no-repeat;
+}
 
 .button {
   padding: 0.75rem 1.25rem;
