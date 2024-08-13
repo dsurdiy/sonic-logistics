@@ -152,7 +152,7 @@
       padding: toRem(40) toRem(0);
    }
    @media (max-width: toEm($mobileSmall)) {
-      padding: toRem(30) toRem(0);
+      padding: toRem(30) toRem(0) toRem(0) toRem(0);
    }
    // .growing__container
    &__container {

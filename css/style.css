@@ -1731,7 +1731,7 @@ body.menu-open {
 }
 @media (max-width: 29.99875em) {
   .growing {
-    padding: 1.875rem 0rem;
+    padding: 1.875rem 0rem 0rem 0rem;
   }
 }
 .growing__container {
