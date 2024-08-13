@@ -3,7 +3,12 @@
    &__business {
       background-color: #f9fafb;
    }
+   // .page__growing
+   &__growing {
+   }
 }
+
+// =============================================================================================================
 
 .business {
    padding: toRem(96) toRem(0);
@@ -133,5 +138,75 @@
    &__text {
       font-size: toRem(16);
       font-weight: 400;
+   }
+}
+
+// =============================================================================================================
+
+.growing {
+   padding: toRem(96) toRem(0);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(70) toRem(0);
+   }
+   @media (max-width: toEm(800)) {
+      padding: toRem(40) toRem(0);
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      padding: toRem(30) toRem(0);
+   }
+   // .growing__container
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: toRem(64);
+      @media (max-width: toEm($tablet)) {
+         column-gap: toRem(32);
+      }
+      @media (max-width: toEm(800)) {
+         grid-template-columns: auto;
+      }
+   }
+   // .growing__wrapper
+   &__wrapper {
+      &:not(:last-child) {
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(10);
+         }
+      }
+   }
+   // .growing__header
+   &__header {
+      padding-bottom: toRem(40);
+      border-bottom: toRem(1) solid #eaecf0;
+      &:not(:last-child) {
+         margin-bottom: toRem(32);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(20);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(10);
+         }
+      }
+      @media (max-width: toEm($tablet)) {
+         padding-bottom: toRem(20);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding-bottom: toRem(10);
+      }
+   }
+   // .growing__text
+   &__text {
+      @media (max-width: toEm($mobileSmall)) {
+         line-height: 1.2;
+         font-size: toRem(16);
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(20);
+            @media (max-width: toEm($tablet)) {
+               margin-bottom: toRem(10);
+            }
+         }
+      }
    }
 }
