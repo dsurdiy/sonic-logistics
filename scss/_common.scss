@@ -265,6 +265,36 @@
       .section-header--text-light & {
          color: #f5fbff;
       }
+      &--border {
+         display: inline-block;
+         padding: toRem(4) toRem(10);
+         border: toRem(1) solid #d0d5dd;
+         border-radius: toRem(8);
+         text-transform: none;
+         box-shadow: 0 toRem(1) toRem(2) 0 rgba(16, 24, 40, 0.05);
+         &:not(:last-child) {
+            margin-bottom: toRem(16);
+            @media (max-width: toEm(800)) {
+               margin-bottom: toRem(8);
+            }
+         }
+         span {
+            font-size: toRem(14);
+            font-weight: 500;
+            color: #344054;
+            display: flex;
+            align-items: center;
+            gap: toRem(7);
+            &::before {
+               content: "";
+               flex: 0 0 toRem(6);
+               width: toRem(6);
+               height: toRem(6);
+               border-radius: 50%;
+               background-color: #0ba5ec;
+            }
+         }
+      }
    }
    // .section-header__title
    &__title {
