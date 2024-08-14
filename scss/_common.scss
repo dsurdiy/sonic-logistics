@@ -86,6 +86,8 @@
    }
    // .page-hero__text
    &__text {
+      max-width: toRem(480);
+      font-size: toRem(20);
       &:not(:last-child) {
          margin-bottom: toRem(48);
          @media (max-width: toEm(800)) {

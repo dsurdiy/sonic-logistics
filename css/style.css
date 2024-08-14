@@ -221,6 +221,10 @@ body.menu-open {
     margin-bottom: 0.625rem;
   }
 }
+.page-hero__text {
+  max-width: 30rem;
+  font-size: 1.25rem;
+}
 .page-hero__text:not(:last-child) {
   margin-bottom: 3rem;
 }
