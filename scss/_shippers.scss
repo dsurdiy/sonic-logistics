@@ -5,6 +5,9 @@
    // .page__testimonial
    &__testimonial {
    }
+   // .page__features
+   &__features {
+   }
 }
 
 .transparency {
@@ -122,3 +125,183 @@
 }
 
 // =============================================================================================================
+
+.features {
+   padding: toRem(96) toRem(0);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(70) toRem(0);
+   }
+   @media (max-width: toEm(800)) {
+      padding: toRem(40) toRem(0);
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      padding: toRem(30) toRem(0);
+   }
+   // .features__container
+   &__container {
+   }
+   // .features__header
+   &__header {
+      max-width: toRem(768);
+      margin: 0 auto;
+      &:not(:last-child) {
+         margin-bottom: toRem(96);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(48);
+         }
+         @media (max-width: toEm(800)) {
+            margin-bottom: toRem(30);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(20);
+         }
+      }
+   }
+   // .features__list
+   &__list {
+   }
+   // .features__item
+   &__item {
+   }
+}
+
+.item-features {
+   display: flex;
+   align-items: center;
+   &:nth-child(even) {
+      flex-direction: row-reverse;
+      @media (max-width: toEm($pc)) {
+         margin-left: toRem(-15);
+         margin-right: 0;
+      }
+      @media (max-width: toEm(800)) {
+         margin-left: 0;
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         flex-direction: column;
+      }
+   }
+   &:not(:last-child) {
+      margin-bottom: toRem(96);
+      @media (max-width: toEm($tablet)) {
+         margin-bottom: toRem(50);
+      }
+      @media (max-width: toEm(800)) {
+         margin-bottom: toRem(30);
+      }
+   }
+   @media (max-width: toEm($pc)) {
+      column-gap: toRem(48);
+      margin-right: toRem(-15);
+   }
+   @media (max-width: toEm($tablet)) {
+      column-gap: toRem(30);
+   }
+   @media (max-width: toEm(800)) {
+      margin-right: 0;
+      text-align: center;
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      line-height: 1.2;
+      font-size: toRem(16);
+      flex-direction: column;
+      gap: toRem(16);
+   }
+   // .item-features__content
+   &__content {
+   }
+   // .item-features__icon
+   &__icon {
+      width: toRem(48);
+      height: toRem(48);
+      object-fit: contain;
+      border-radius: 50%;
+      &:not(:last-child) {
+         margin-bottom: toRem(24);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(10);
+         }
+      }
+   }
+   // .item-features__title
+   &__title {
+      font-size: toRem(30);
+      color: $secondaryTextColor;
+      font-weight: 600;
+      line-height: 1.27;
+      &:not(:last-child) {
+         margin-bottom: toRem(16);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(8);
+         }
+      }
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(24);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(20);
+      }
+   }
+   // .item-features__text
+   &__text {
+      &:not(:last-child) {
+         margin-bottom: toRem(32);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(15);
+         }
+      }
+   }
+   // .item-features__list
+   &__list {
+   }
+   // .item-features__item
+   &__item {
+      display: flex;
+      gap: toRem(12);
+      align-items: flex-start;
+      text-align: left;
+      &:not(:last-child) {
+         margin-bottom: toRem(20);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(10);
+         }
+      }
+      &::before {
+         content: "";
+         flex: 0 0 toRem(28);
+         width: toRem(28);
+         height: toRem(28);
+         border-radius: 50%;
+         background: url("../img/icons/features-icon.svg") 0 0 / contain no-repeat;
+         margin-top: toRem(3);
+      }
+   }
+   // .item-features__image
+   &__image {
+      position: relative;
+      right: toRem(-112);
+      flex: 0 0 toRem(720);
+      .item-features:nth-child(even) & {
+         right: 0;
+         left: toRem(-112);
+         @media (max-width: toEm($pc)) {
+            left: 0;
+         }
+      }
+      @media (max-width: toEm($pc)) {
+         right: 0;
+         flex: 0 0 50%;
+      }
+      @media (max-width: toEm(800)) {
+         display: none;
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         display: block;
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
