@@ -72,14 +72,14 @@
                      </p>
                   </div>
                   <ul class="aside-contact__list">
-                     <li class="aside-contact__item item-contact">
+                     <li class="aside-contact__item item-contact item-contact--email">
                         <h3 class="item-contact__title">Email us</h3>
                         <p class="item-contact__text">Let us know how we can help.</p>
                         <a class="item-contact__link" href="mailto:support@sonic-logistics.com">
                            support@sonic-logistics.com
                         </a>
                      </li>
-                     <li class="aside-contact__item item-contact">
+                     <li class="aside-contact__item item-contact item-contact--phone">
                         <h3 class="item-contact__title">Call Us</h3>
                         <p class="item-contact__text">Available 24 hours a day, 7 days a week.</p>
                         <a class="item-contact__link" href="tel:4695454687">
@@ -119,68 +119,70 @@
                </footer>
             </aside>
             <div class="contact__content">
-               <h1 class="contact__title">Get a Quote</h1>
-               <h2 class="contact__sub-title">Or give us a call. We’re available 24/7.</h2>
-               <form class="contact__form form" action="#">
-                  <div class="form__body">
-                     <div class="form__item">
-                        <label for="first-name">First name</label>
-                        <input id="first-name" type="text" name="name" required placeholder="First name">
-                     </div>
-                     <div class="form__item">
-                        <label for="last-name">Last name</label>
-                        <input id="last-name" type="text" name="last-name" required placeholder="Last name">
-                     </div>
-                     <div class="form__item">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" required placeholder="you@company.com">
-                     </div>
-                     <div class="form__item">
-                        <label for="phone">Phone number</label>
-                        <input id="phone" type="tel" name="phone" required placeholder="+1 (555) 000-0000">
-                     </div>
-                     <div class="form__item">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Leave us a message..."></textarea>
-                     </div>
-                     <div class="form__item">
-                        <label>Services</label>
+               <div class="contact__wrapper">
+                  <h1 class="contact__title">Get a Quote</h1>
+                  <h2 class="contact__sub-title">Or give us a call. We’re available 24/7.</h2>
+                  <form class="contact__form form" action="#">
+                     <div class="form__body">
+                        <div class="form__item form__item--small">
+                           <label for="first-name">First name</label>
+                           <input id="first-name" type="text" name="name" required placeholder="First name">
+                        </div>
+                        <div class="form__item form__item--small">
+                           <label for="last-name">Last name</label>
+                           <input id="last-name" type="text" name="last-name" required placeholder="Last name">
+                        </div>
+                        <div class="form__item">
+                           <label for="email">Email</label>
+                           <input id="email" type="email" name="email" required placeholder="you@company.com">
+                        </div>
+                        <div class="form__item">
+                           <label for="phone">Phone number</label>
+                           <input id="phone" type="tel" name="phone" required placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="form__item">
+                           <label for="message">Message</label>
+                           <textarea id="message" name="message" placeholder="Leave us a message..."></textarea>
+                        </div>
                         <div class="form__box box-form">
-                           <label class="box-form__label">
-                              <input class="box-form__input" type="checkbox">
-                              <span class="box-form__checkbox"></span>
-                              Website design
-                           </label>
-                           <label class="box-form__label">
-                              <input class="box-form__input" type="checkbox">
-                              <span class="box-form__checkbox"></span>
-                              UX design
-                           </label>
-                           <label class="box-form__label">
-                              <input class="box-form__input" type="checkbox">
-                              <span class="box-form__checkbox"></span>
-                              User research
-                           </label>
-                           <label class="box-form__label">
-                              <input class="box-form__input" type="checkbox">
-                              <span class="box-form__checkbox"></span>
-                              Content creation
-                           </label>
-                           <label class="box-form__label">
-                              <input class="box-form__input" type="checkbox">
-                              <span class="box-form__checkbox"></span>
-                              Strategy & consulting
-                           </label>
-                           <label class="box-form__label">
-                              <input class="box-form__input" type="checkbox">
-                              <span class="box-form__checkbox"></span>
-                              Other
-                           </label>
+                           <h6 class="box-form__title">Services</h6>
+                           <div class="box-form__wrapper">
+                              <label class="box-form__label">
+                                 <input class="box-form__input" type="checkbox">
+                                 <span class="box-form__checkbox"></span>
+                                 Website design
+                              </label>
+                              <label class="box-form__label">
+                                 <input class="box-form__input" type="checkbox">
+                                 <span class="box-form__checkbox"></span>
+                                 UX design
+                              </label>
+                              <label class="box-form__label">
+                                 <input class="box-form__input" type="checkbox">
+                                 <span class="box-form__checkbox"></span>
+                                 User research
+                              </label>
+                              <label class="box-form__label">
+                                 <input class="box-form__input" type="checkbox">
+                                 <span class="box-form__checkbox"></span>
+                                 Content creation
+                              </label>
+                              <label class="box-form__label">
+                                 <input class="box-form__input" type="checkbox">
+                                 <span class="box-form__checkbox"></span>
+                                 Strategy & consulting
+                              </label>
+                              <label class="box-form__label">
+                                 <input class="box-form__input" type="checkbox">
+                                 <span class="box-form__checkbox"></span>
+                                 Other
+                              </label>
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <button class="form__button" type="submit">Get started</button>
-               </form>
+                     <button class="form__button" type="submit">Get started</button>
+                  </form>
+               </div>
             </div>
          </section>
       </main>
